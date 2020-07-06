@@ -21,11 +21,11 @@ const EditSong = (props) => {
         setErrorMessage('There was a problem, please refresh and try again');
         setIsLoading(false);
       });
-  }, []);
+  }, [props.songId]);
 
   function editSong() {
     axios
-      .put(`http://localhost:3000/songs/${props.songId}`, {
+      .put(`https://thawing-peak-04701.herokuapp.com/songs/${props.songId}`, {
         song: {
           title: songTitle,
           artist: songArtist

@@ -3,7 +3,9 @@ import axios from 'axios';
 
 const DeleteSong = ({ songId, onDelete }) => {
   function deleteSong() {
-    axios.delete(`http://localhost:3000/songs/${songId}`).then(onDelete);
+    axios
+      .delete(`https://thawing-peak-04701.herokuapp.com/songs/${songId}`)
+      .then(onDelete);
   }
 
   return <button onClick={deleteSong}>X</button>;

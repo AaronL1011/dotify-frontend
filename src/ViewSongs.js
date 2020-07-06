@@ -10,7 +10,7 @@ const ViewSongs = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/songs`)
+      .get(`https://thawing-peak-04701.herokuapp.com/songs`)
       .then((res) => {
         setIsLoading(false);
         setSongs(res.data);

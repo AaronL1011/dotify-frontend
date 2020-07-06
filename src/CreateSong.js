@@ -10,7 +10,7 @@ const CreateSong = () => {
 
   function createSong() {
     axios
-      .post(`http://localhost:3000/songs`, {
+      .post(`https://thawing-peak-04701.herokuapp.com/songs`, {
         song: {
           title: songTitle,
           artist: songArtist

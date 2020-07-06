@@ -9,7 +9,7 @@ const ViewSong = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/songs/${props.songId}`)
+      .get(`https://thawing-peak-04701.herokuapp.com/songs/${props.songId}`)
       .then((res) => {
         setIsLoading(false);
         setSong(res.data);
@@ -18,7 +18,7 @@ const ViewSong = (props) => {
         setErrorMessage('There was a problem, please refresh and try again');
         setIsLoading(false);
       });
-  }, []);
+  }, [props.songId]);
 
   return (
     <div>
